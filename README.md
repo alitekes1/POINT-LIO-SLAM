@@ -12,6 +12,8 @@ This repository provides ready-to-use ROS 2 Humble configuration and launch file
 - GTSAM
 - TEASER++
 - TBB (used by Quatro for speed)
+- Livox-SDK2 (for UniLidar L1)
+
 
 ### Install GTSAM (4.1.1)
 ```bash
@@ -31,23 +33,7 @@ cmake .. -DENABLE_DIAGNOSTIC_PRINT=OFF
 sudo make install -j16
 sudo ldconfig
 ```
-
-### Install TBB
-```bash
-sudo apt install -y libtbb-dev
-```
-
-## Ubuntu 20.04 instructions
-Dependencies:
-- CMake 3.0.0+
-- gcc 4.8.1+
-
-Install CMake using apt:
-```bash
-sudo apt install -y cmake
-```
-
-Compile and install Livox-SDK2:
+### Install Livox-SDK2
 ```bash
 git clone https://github.com/Livox-SDK/Livox-SDK2.git
 cd ./Livox-SDK2/
@@ -56,6 +42,12 @@ cd build
 cmake .. && make -j
 sudo make install
 ```
+
+### Install TBB
+```bash
+sudo apt install -y libtbb-dev
+```+
+
 
 ## Workspace layout
 Create a ROS 2 workspace and clone the required repositories under `src/`:
@@ -89,5 +81,3 @@ ros2 launch point-lio-slam mapping.launch.py
 ```bash
 ros2 launch point-lio-slam localization.launch.py
 ```
-
-RViz presets are in `rviz/`. Core parameters for UniLidar L1 are in `config/` (e.g., `lio_unilidar_l1.yaml`, `mapping_indoor.yaml`, `localization_indoor.yaml`).
