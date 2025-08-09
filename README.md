@@ -46,10 +46,10 @@ sudo make install
 ### Install TBB
 ```bash
 sudo apt install -y libtbb-dev
-```+
+```
 
 
-## Workspace layout
+### Workspace layout
 Create a ROS 2 workspace and clone the required repositories under `src/`:
 ```bash
 mkdir -p ~/my_ws/src && cd ~/my_ws/src
