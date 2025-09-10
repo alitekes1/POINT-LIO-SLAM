@@ -1,6 +1,6 @@
 # POINT-LIO-SLAM
 
-This repository provides ready-to-use ROS 2 Humble configuration and launch files for composing [FAST-LIO-SAM-QN](https://github.com/engcang/FAST-LIO-SAM-QN) and [lidar_localization_ros2](https://github.com/rsasaki0109/lidar_localization_ros2) (original repositories) along with ROS 2 wrapper [FAST-LIO-SAM-QN](https://github.com/illusionaryshelter/FAST-LIO-SAM-QN). These configurations are tailored for UniLidar L1 indoor mapping and localization. No new algorithmic code is introduced; instead, this repository packages configuration files, launch scripts, and RViz presets to enable seamless integration and one-command bring-up of the upstream projects.
+This repository provides ready-to-use ROS 2 Humble configuration and launch files for composing [FAST-LIO-SAM-QN](https://github.com/engcang/FAST-LIO-SAM-QN) and [lidar_localization_ros2](https://github.com/rsasaki0109/lidar_localization_ros2) (original repositories) along with ROS 2 wrapper [FAST-LIO-SAM-QN](https://github.com/illusionaryshelter/FAST-LIO-SAM-QN). These configurations are tailored for UniLidar L1 indoor mapping and localization. No new algorithmic code is introduced; instead, this repository packages configuration files, launch scripts, and RViz presets to enable seamless integration and one-command bring-up of the upstream projects. Huge thanks to [Muhammed Veli Ünlü](https://github.com/mvu20002/POINT-LIO-SLAM) for this excellent works.
 
 ## Dependencies
 - C++ >= 17
@@ -8,7 +8,7 @@ This repository provides ready-to-use ROS 2 Humble configuration and launch file
 - CMake >= 3.10.0
 - Eigen >= 3.2
 - Boost >= 1.54
-- ROS 2 Humble (Ubuntu 22.04 recommended)
+- ROS2 Humble (Ubuntu 22.04) or ROS2 Jazzy (Ubuntu 24.04) 
 - GTSAM
 - TEASER++
 - TBB (used by Quatro for speed)
