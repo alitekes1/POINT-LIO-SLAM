@@ -6,13 +6,13 @@ sam-qn_node:
             vis_hz: 0.5                                 # visualize Hz
 
         keyframe:
-            keyframe_threshold: 0.1                     # unit [meter] every this distance, generate keyframe
-            num_submap_keyframes: 20                     # how many subkeyframes are merged to ICP with current keyframe (closest-this ~ closest+this, if exists)
-            enable_submap_matching: false               # If it is set to be `true`, submap-level (coarse-to-)fine alignment will be performed
+            keyframe_threshold: 0.05                     # unit [meter] every this distance, generate keyframe
+            num_submap_keyframes: 20  #TODO                   # how many subkeyframes are merged to ICP with current keyframe (closest-this ~ closest+this, if exists)
+            enable_submap_matching: true               # If it is set to be `true`, submap-level (coarse-to-)fine alignment will be performed
                                                         # note: without Quatro, anyway scan-to-submap matching is performed, as that shows better performance
 
         loop:
-            loop_detection_radius: 30.0                 # unit [meter] within this radius, check if loop or not
+            loop_detection_radius: 20.0      ## TODO            # unit [meter] within this radius, check if loop or not
             loop_detection_timediff_threshold: 20.0     # unit [sec] check if two keyframes are loop if times are farther than this
 
         quatro_nano_gicp_voxel_resolution: 0.1        # voxel resolution to use Quatro and Nano-GICP matching
