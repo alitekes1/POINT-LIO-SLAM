@@ -52,7 +52,7 @@ sudo apt install -y libtbb-dev
 ### Workspace layout
 Create a ROS 2 workspace and clone the required repositories under `src/`:
 ```bash
-mkdir -p ~/my_ws/src && cd ~/my_ws/src
+mkdir -p ~/ros2_ws/src && cd ~/ros2_ws/src
 git clone https://github.com/alitekes1/POINT-LIO-SLAM.git
 git clone https://github.com/alitekes1/lidar_localization_ros2.git 
 mkdir third_party && cd third_party
@@ -66,7 +66,7 @@ git clone https://github.com/dfloreaa/point_lio_ros2.git
 
 ## Build
 ```bash
-cd ~/my_ws
+cd ~/ros2_ws
 source /opt/ros/{$ROS_DISTRO}/setup.bash
 colcon build --symlink-install
 source install/setup.bash

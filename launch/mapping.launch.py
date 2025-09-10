@@ -36,14 +36,14 @@ def generate_launch_description():
             'config', 'lio_unilidar_l1.yaml'
         ]),
         {
-            'use_imu_as_input': False,  # Change to True to use IMU as input of Point-LIO
+            'use_imu_as_input': True,  # Change to True to use IMU as input of Point-LIO
             'prop_at_freq_of_imu': True,
             'check_satu': True,
             'init_map_size': 10,
-            'point_filter_num': 1,  # Options: 1, 3
+            'point_filter_num': 3,  # Options: 1, 3
             'space_down_sample': True,
-            'filter_size_surf': 0.1,  # Options: 0.5, 0.3, 0.2, 0.15, 0.1
-            'filter_size_map': 0.1,  # Options: 0.5, 0.3, 0.15, 0.1
+            'filter_size_surf': 0.3,  # Options: 0.5, 0.3, 0.2, 0.15, 0.1
+            'filter_size_map': 0.4,  # Options: 0.5, 0.3, 0.15, 0.1
             'cube_side_length': 1000.0,  # Option: 1000
             'runtime_pos_log_enable': False,  # Option: True
         }
